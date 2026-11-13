@@ -9,7 +9,7 @@ import { CartesEntites } from '../sections/Entites';
 import { useSeo } from '../seo';
 
 const OPERATIONS = [
-  { titre: 'Les installations', texte: 'Un centre emplisseur implanté à Kpogan.' },
+  { titre: 'Les installations', texte: 'Un Centre Emplisseur implanté à Kpogan.' },
   { titre: 'L’emplissage', texte: 'Les opérations d’emplissage des bouteilles de gaz.' },
   { titre: 'Les bouteilles SANOL', texte: 'Des bouteilles de marque SANOL, en trois formats.' },
 ];
@@ -18,8 +18,8 @@ export default function SanolGaz() {
   const ref = useRef<HTMLDivElement>(null);
   useReveal(ref);
   useSeo({
-    title: 'SANOL GAZ · Centre emplisseur de Kpogan',
-    description: 'SANOL GAZ : le centre emplisseur de Kpogan et les bouteilles de gaz de marque SANOL, en 6, 12,5 et 50 kg.',
+    title: 'SANOL GAZ · Centre Emplisseur de Kpogan',
+    description: 'SANOL GAZ : le Centre Emplisseur de Kpogan et les bouteilles de gaz de marque SANOL, en 6, 12,5 et 50 kg.',
     path: '/sanol-gaz',
   });
   return (
@@ -27,7 +27,7 @@ export default function SanolGaz() {
       <PageHero
         photo="inscription"
         fil="Sanol Gaz"
-        oeil="SANOL GAZ · Centre emplisseur de Kpogan."
+        oeil="SANOL GAZ · Centre Emplisseur de Kpogan."
         lignes={['Le gaz en bouteille,', 'de marque SANOL.']}
         chapo="Avec SANOL GAZ, le Groupe a élargi son champ d’intervention au secteur gazier."
       />
@@ -38,12 +38,12 @@ export default function SanolGaz() {
             <Photo id="centreEmplisseur" reveal />
           </div>
           <div>
-            <Oeil>Le centre emplisseur.</Oeil>
+            <Oeil>Le Centre Emplisseur.</Oeil>
             <Lines className="t2" id="centre-titre" lines={['À Kpogan,', <em key="e">l’emplissage des bouteilles.</em>]} />
             <div className="prose" data-reveal="fade">
               <p>
                 Le Groupe a progressivement élargi son champ d’intervention au secteur gazier, avec la création de SANOL GAZ et la mise en
-                place de son centre emplisseur, situé à Kpogan.
+                place de son Centre Emplisseur, situé à Kpogan.
               </p>
             </div>
             <ol className="liste-rang" role="list" data-reveal="stagger">

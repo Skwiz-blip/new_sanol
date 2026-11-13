@@ -103,7 +103,7 @@ export default function Contact() {
             <div className="contact__carte">
               <Pin />
               <div>
-                <h2>SANOL GAZ, centre emplisseur</h2>
+                <h2>SANOL GAZ, Centre Emplisseur</h2>
                 <p>{SITE.centre}</p>
               </div>
             </div>

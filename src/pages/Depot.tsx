@@ -11,7 +11,7 @@ import { Chiffres, Mosaique } from '../sections/blocs';
 import { useSeo } from '../seo';
 
 const ACTIVITES: { titre: string; texte: string; photo: PhotoId }[] = [
-  { titre: 'La réception', texte: 'Le GPL arrive par voie maritime, à bord d’un tanker.', photo: 'zonePortuaire' },
+  { titre: 'La réception', texte: 'Le GPL arrive par voie maritime, à bord d’un tanker.', photo: 'navire' },
   { titre: 'Le stockage', texte: 'Le produit est stocké dans une sphère construite sous talus.', photo: 'sphereSol' },
   { titre: 'La distribution', texte: 'Les camions-citernes sont chargés depuis trois baies de chargement.', photo: 'baiesDrone' },
 ];
@@ -104,7 +104,7 @@ export default function Depot() {
               <Lines className="t2" id="images-titre" lines={['Les installations,', <em key="e">les équipes, les opérations.</em>]} />
             </div>
           </div>
-          <Mosaique photos={['vueAerienne', 'inscription', 'raccordement', 'camionsBaies', 'operateurs', 'conduites', 'equipeBaies', 'consignes', 'spheresCiel']} />
+          <Mosaique photos={['spheresCiel', 'inscription', 'agent', 'camionsBaies', 'operateurs', 'controle', 'equipeBaies', 'consignes', 'baies']} />
         </div>
       </section>
 

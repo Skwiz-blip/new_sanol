@@ -28,7 +28,7 @@ export function Intro() {
       </div>
       <div className="cadre">
         <div className="intro__visuel">
-          <Photo id="vueAerienne" reveal parallax={0.1} />
+          <Photo id="controle" reveal parallax={0.1} />
         </div>
         <dl className="reperes" data-reveal="stagger">
           <div>
@@ -82,7 +82,7 @@ export function Chiffres() {
         </ul>
         <div className="garanties">
           <div className="garanties__photo">
-            <Photo id="posteControle" reveal parallax={0.08} />
+            <Photo id="camionSphere" reveal parallax={0.08} />
           </div>
           <ol role="list" data-reveal="stagger">
             {GARANTIES.map((g, k) => (
@@ -144,7 +144,7 @@ export function Trading({ complet }: { complet?: boolean }) {
 }
 
 const RANG_A: PhotoId[] = ['sphereSol', 'baiesDrone', 'operateurs', 'camionsBaies', 'siegeDrone', 'conduites'];
-const RANG_B: PhotoId[] = ['equipeBaies', 'inscription', 'agent', 'zonePortuaire', 'posteControle', 'camionSphere'];
+const RANG_B: PhotoId[] = ['equipeBaies', 'inscription', 'agent', 'spheresCiel', 'raccordement', 'flexibles'];
 
 /** Deux rangées de photographies qui défilent lentement, en sens opposés. */
 export function Galerie() {

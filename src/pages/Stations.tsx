@@ -24,7 +24,7 @@ export default function Stations() {
   return (
     <div ref={ref}>
       <PageHero
-        photo="siege"
+        photo="stationPompiste"
         fil="Stations-service"
         oeil="SANOL · Stations-service et shops."
         lignes={['Les produits pétroliers,', 'au plus près de vous.']}

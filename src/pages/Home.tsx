@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { SITE } from '../data/site';
 import { useReveal } from '../motion/useReveal';
-import { Chaine } from '../sections/Chaine';
 import { Entites } from '../sections/Entites';
 import { Hero } from '../sections/Hero';
 import { Chiffres, Galerie, Intro, Trading } from '../sections/blocs';
@@ -13,7 +12,7 @@ export default function Home() {
   useSeo({
     title: SITE.nom,
     description:
-      'GROUPE SANOU SA : réception, stockage et distribution du GPL au dépôt de Katanga, centre emplisseur SANOL GAZ de Kpogan, stations-service et shops SANOL. Lomé, Togo.',
+      'GROUPE SANOU SA : réception, stockage et distribution du GPL au dépôt de Katanga, Centre Emplisseur SANOL GAZ de Kpogan, stations-service et shops SANOL. Lomé, Togo.',
     path: '/',
   });
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <Hero />
       <Intro />
       <Entites />
-      <Chaine />
       <Chiffres />
       <Trading />
       <Galerie />

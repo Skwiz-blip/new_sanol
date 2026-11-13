@@ -4,12 +4,11 @@ import { Pause, Play } from '../design/Icons';
 import { Bouton, Oeil, Photo } from '../design/ui';
 import { useQuality } from '../motion/quality';
 
-/** Les vues de l'ouverture. La première est la sphère portant l'inscription Sanol Gaz. */
+/** Les vues de l'ouverture : une par entité. La première est la sphère portant l'inscription Sanol Gaz. */
 const VUES: { photo: PhotoId; legende: string }[] = [
   { photo: 'sphere', legende: 'Dépôt GPL · Katanga' },
-  { photo: 'baies', legende: 'Baies de chargement' },
-  { photo: 'vueAerienne', legende: 'Le dépôt vu du ciel' },
-  { photo: 'raccordement', legende: 'Opérations de chargement' },
+  { photo: 'centreEmplisseur', legende: 'Centre Emplisseur · Kpogan' },
+  { photo: 'camionDepot', legende: 'Stations-service et shops' },
 ];
 const DUREE = 6500;
 
@@ -71,7 +70,7 @@ export function Hero() {
       </div>
 
       <div className="cadre hero__bas">
-        <div className="hero__vues" role="tablist" aria-label="Photographies du dépôt">
+        <div className="hero__vues" role="tablist" aria-label="Les entités du Groupe">
           {VUES.map((v, k) => (
             <button
               key={v.photo}

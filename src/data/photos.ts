@@ -1,6 +1,8 @@
 export type Photo = { src: string; alt: string; focus?: string; provisoire?: boolean };
 
 const reel = (fichier: string, alt: string, focus?: string): Photo => ({ src: `/media/sanol/${fichier}.webp`, alt, focus });
+/** Visuels de la médiathèque du back-office (illustrations, affiche). */
+const visuel = (fichier: string, alt: string, focus?: string): Photo => ({ src: `/media/visuels/${fichier}.webp`, alt, focus });
 
 /** Photographies du reportage SANOU SA (octobre 2026), sauf mention « provisoire ». */
 export const PHOTOS = {
@@ -9,8 +11,6 @@ export const PHOTOS = {
   inscription: reel('reel-logo-sanolgaz', 'L’inscription Sanol Gaz sur la sphère du dépôt.', '55% 45%'),
   spheres: reel('reel-reservoirs', 'Les installations de stockage du dépôt GPL.', '45% 50%'),
   spheresCiel: reel('reel-reservoirs-ciel', 'Les installations de stockage vues d’en haut.'),
-  vueAerienne: reel('reel-vue-aerienne', 'Vue aérienne du dépôt GPL SANOU SA et de ses baies de chargement.', '50% 55%'),
-  zonePortuaire: reel('reel-zone-portuaire', 'Le dépôt GPL SANOU SA dans la zone portuaire de Lomé, vu du ciel.'),
   baies: reel('reel-quai-camions', 'Camions-citernes sous l’auvent des baies de chargement, devant la sphère Sanol Gaz.', '45% 55%'),
   baiesDrone: reel('reel-quai-drone', 'Les baies de chargement vues du ciel, sous l’auvent bleu et rouge.', '60% 55%'),
   camionsBaies: reel('reel-camions-quai', 'Camions-citernes alignés aux baies de chargement.', '55% 60%'),
@@ -20,12 +20,18 @@ export const PHOTOS = {
   conduites: reel('reel-conduites', 'Conduites et bras de chargement du dépôt.'),
   camionDepot: reel('reel-camion-depot', 'Camion-citerne Sanol Gaz devant les installations de stockage.', '50% 60%'),
   camionSphere: reel('reel-camion-reservoir', 'Camion-citerne Sanol Gaz devant la sphère du dépôt.', '50% 60%'),
-  posteControle: reel('reel-poste-controle', 'Poste de contrôle à l’entrée du dépôt, à l’arrivée d’un camion-citerne.', '50% 55%'),
   consignes: reel('reel-consignes', 'Panneau des consignes de sécurité du dépôt.', '50% 45%'),
   agent: reel('reel-equipe', 'Agent du dépôt en tenue de sécurité devant les baies de chargement.', '40% 50%'),
   siege: reel('reel-siege', 'Le bâtiment administratif du Groupe SANOU SA.', '50% 55%'),
   siegeDrone: reel('reel-siege-drone', 'Le bâtiment administratif et l’entrée du dépôt, vus du ciel.', '50% 55%'),
-  centreEmplisseur: reel('reel-centre-remplisseur', 'La chaîne d’emplissage des bouteilles de gaz du centre emplisseur.', '45% 55%'),
+  centreEmplisseur: reel('reel-centre-remplisseur', 'La chaîne d’emplissage des bouteilles de gaz du Centre Emplisseur.', '45% 55%'),
+  controle: reel('reel-salle-controle', 'Salle de contrôle : un opérateur surveille les écrans de supervision.', '50% 50%'),
+  navireQuai: reel('reel-navire-quai', 'Navire-citerne à quai, flexible de déchargement suspendu au-dessus du quai.', '50% 45%'),
+  navireGpl: reel('reel-navire-gpl', 'Navire transporteur de GPL amarré à quai.', '55% 55%'),
+  stationSanol: visuel('station-sanol', 'Station-service SANOL au coucher du soleil, avec sa boutique et son totem de prix.', '45% 55%'),
+  stationPompiste: visuel('station-pompiste', 'Pompiste SANOL souriant devant une station-service SANOL.', '72% 40%'),
+  afficheSanolGaz: visuel('affiche-sanol-gaz', 'Bouteilles de gaz SANOL GAZ de plusieurs formats.', '88% 62%'),
+  flexibles: reel('reel-flexibles', 'Flexibles raccordés entre le navire-citerne et les installations à terre.', '50% 45%'),
   // Image provisoire : gardée tant que SANOU SA n'a pas fourni ses photos de navires.
   navire: {
     src: '/media/provisoire/navire.webp',

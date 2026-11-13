@@ -28,11 +28,11 @@ export const ENTITES: Entite[] = [
     slug: 'sanol-gaz',
     rang: '02',
     marque: 'SANOL GAZ',
-    lieu: 'Centre emplisseur de Kpogan',
+    lieu: 'Centre Emplisseur de Kpogan',
     titre: 'L’emplissage des bouteilles de gaz de marque SANOL.',
-    resume: 'À Kpogan, le centre emplisseur assure l’emplissage des bouteilles de gaz SANOL, proposées en 6, 12,5 et 50 kg.',
-    points: ['Installations du centre emplisseur', 'Opérations d’emplissage', 'Bouteilles de 6, 12,5 et 50 kg'],
-    photo: 'centreEmplisseur',
+    resume: 'À Kpogan, le Centre Emplisseur assure l’emplissage des bouteilles de gaz SANOL, proposées en 6, 12,5 et 50 kg.',
+    points: ['Installations du Centre Emplisseur', 'Opérations d’emplissage', 'Bouteilles de 6, 12,5 et 50 kg'],
+    photo: 'afficheSanolGaz',
   },
   {
     slug: 'stations',
@@ -49,12 +49,12 @@ export const ENTITES: Entite[] = [
 
 /** La chaîne d'approvisionnement du GPL, de la mer aux camions-citernes. */
 export const CHAINE: { rang: string; titre: string; texte: string; photo: PhotoId }[] = [
-  { rang: '01', titre: 'Approvisionnement maritime', texte: 'Arrivée du tanker transportant le GPL.', photo: 'navire' },
-  { rang: '02', titre: 'Accostage', texte: 'Arrivée et accostage du navire au quai.', photo: 'zonePortuaire' },
-  { rang: '03', titre: 'Opérations de réception', texte: 'Raccordement des flexibles entre le navire et les installations terrestres.', photo: 'raccordement' },
-  { rang: '04', titre: 'Transfert du produit', texte: 'Circulation du GPL à travers les pipelines jusqu’au dépôt.', photo: 'conduites' },
-  { rang: '05', titre: 'Stockage', texte: 'Acheminement du GPL vers les installations de stockage, notamment la sphère.', photo: 'sphereSol' },
-  { rang: '06', titre: 'Distribution', texte: 'Chargement du GPL dans les camions-citernes, vers les clients et les points de distribution.', photo: 'baies' },
+  { rang: '01', titre: 'Approvisionnement maritime', texte: 'Arrivée du tanker transportant le GPL.', photo: 'navireQuai' },
+  { rang: '02', titre: 'Accostage', texte: 'Arrivée et accostage du navire au quai.', photo: 'navireGpl' },
+  { rang: '03', titre: 'Opérations de réception', texte: 'Raccordement des flexibles entre le navire et les installations terrestres.', photo: 'flexibles' },
+  { rang: '04', titre: 'Stockage', texte: 'Acheminement du GPL vers les installations de stockage, notamment la sphère.', photo: 'sphereSol' },
+  { rang: '05', titre: 'Transfert du produit', texte: 'Circulation du GPL à travers les pipelines, de la sphère jusqu’aux baies de chargement.', photo: 'raccordement' },
+  { rang: '06', titre: 'Distribution', texte: 'Chargement du GPL dans les camions-citernes, vers les clients et les points de distribution.', photo: 'conduites' },
 ];
 
 /** Le dépôt en chiffres : uniquement ce que le Groupe a communiqué. */
@@ -90,9 +90,9 @@ export const HISTOIRE: { repere: string; titre: string; texte: string }[] = [
   },
   {
     repere: 'Gaz',
-    titre: 'SANOL GAZ et le centre emplisseur de Kpogan',
+    titre: 'SANOL GAZ et le Centre Emplisseur de Kpogan',
     texte:
-      'Le Groupe élargit progressivement son champ d’intervention au secteur gazier, avec la création de SANOL GAZ et la mise en place de son centre emplisseur, situé à Kpogan.',
+      'Le Groupe élargit progressivement son champ d’intervention au secteur gazier, avec la création de SANOL GAZ et la mise en place de son Centre Emplisseur, situé à Kpogan.',
   },
   {
     repere: '2026',

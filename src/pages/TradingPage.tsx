@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { PageHero } from '../design/PageHero';
 import { useReveal } from '../motion/useReveal';
-import { Chaine } from '../sections/Chaine';
 import { Trading } from '../sections/blocs';
 import { useSeo } from '../seo';
 
@@ -17,14 +16,13 @@ export default function TradingPage() {
   return (
     <div ref={ref}>
       <PageHero
-        photo="zonePortuaire"
+        photo="spheresCiel"
         fil="Trading & Supply Chain"
         oeil="Trading & Supply Chain."
         lignes={['Coordonner la chaîne,', 'de l’achat à la distribution.']}
         chapo="Un axe majeur du positionnement du Groupe : organiser chaque étape de l’approvisionnement."
       />
       <Trading complet />
-      <Chaine />
     </div>
   );
 }
