@@ -27,7 +27,7 @@ export default function Stations() {
         photo="stationPompiste"
         fil="Stations-service"
         oeil="SANOL · Stations-service et shops."
-        lignes={['Les produits pétroliers,', 'au plus près de vous.']}
+        lignes={['Les produits pétroliers, plus près de vous.']}
         chapo="Le premier métier du Groupe, depuis sa création en 2007 sous l’appellation SANOL."
       />
 

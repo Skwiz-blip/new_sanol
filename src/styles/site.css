@@ -439,6 +439,8 @@ html.motion .phero__fond img { animation: zoom-lent 2.4s var(--ease) both; }
 .trading__grille { display: grid; gap: 48px 88px; }
 @media (min-width: 1000px) { .trading__grille { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); } }
 .trading__tete .chapo { margin: 24px 0 36px; color: var(--gris); font-size: 17px; }
+.trading__visuel { margin-top: 40px; aspect-ratio: 3 / 2; border-radius: var(--rayon-l); overflow: hidden; box-shadow: 0 0 0 1px var(--filet); }
+.trading__visuel .photo { height: 100%; }
 .expertises { display: grid; gap: 16px; }
 @media (min-width: 640px) { .expertises { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .expertises li {
@@ -531,6 +533,9 @@ html.motion .phero__fond img { animation: zoom-lent 2.4s var(--ease) both; }
 .formats__valeur { font-family: var(--f-titre); font-weight: 800; font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9; }
 .formats__valeur small { margin-left: 8px; font-size: 0.32em; }
 .formats li:hover .formats__valeur small { color: var(--rouge); }
+.formats li.formats__avec-photo { justify-content: flex-start; gap: 28px; }
+.formats__photo { aspect-ratio: 4 / 5; border-radius: var(--rayon); overflow: hidden; background: #eef0f3; }
+.formats__photo img { width: 100%; height: 100%; object-fit: cover; }
 .formats__libelle { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; }
 
 /* ---------- Contact ---------- */

@@ -43,7 +43,7 @@ export const ENTITES: Entite[] = [
     resume:
       'Depuis 2007, SANOL distribue les produits pétroliers à travers son réseau de stations-service, avec des espaces commerciaux (shops) qui offrent des produits et services de proximité.',
     points: ['Réseau de stations-service', 'Distribution de produits pétroliers', 'Espaces commerciaux (shops)'],
-    photo: 'camionDepot',
+    photo: 'stationSanol',
   },
 ];
 
@@ -115,4 +115,9 @@ export const VALEURS: { titre: string; texte: string }[] = [
   { titre: 'Nouvelles opportunités', texte: 'La recherche permanente de nouvelles perspectives de croissance.' },
 ];
 
-export const FORMATS = ['6 kg', '12,5 kg', '50 kg'];
+/** Les formats de bouteilles SANOL. */
+export const FORMATS: { valeur: string; photo?: PhotoId }[] = [
+  { valeur: '6 kg', photo: 'bouteille6' },
+  { valeur: '12,5 kg', photo: 'bouteille125' },
+  { valeur: '50 kg', photo: 'bouteille50' },
+];

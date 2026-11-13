@@ -25,6 +25,30 @@ export const SITE = {
   apiContact: (import.meta.env.VITE_API_URL ?? '') + '/api/contact',
 } as const;
 
+/**
+ * Les coordonnées du pied de page, propres à chaque onglet.
+ * Un téléphone à `null` n'est pas encore communiqué : il s'affiche « +228 XX XX XX XX », sans lien.
+ */
+export type Telephone = { affiche: string; lien: string };
+export type Coordonnees = { adresses: string[]; telephones: (Telephone | null)[] };
+
+const siegeSeul = (): Coordonnees => ({ adresses: [`Siège social : ${SITE.siege}`], telephones: [null] });
+
+export const COORDONNEES: Record<string, Coordonnees> = {
+  '/': siegeSeul(),
+  '/groupe': siegeSeul(),
+  '/depot-gpl': {
+    adresses: [`Siège social : ${SITE.siege}`, `Dépôt GPL : ${SITE.depot}`],
+    telephones: [...SITE.telephones],
+  },
+  '/sanol-gaz': siegeSeul(),
+  '/stations': siegeSeul(),
+  '/trading-supply-chain': siegeSeul(),
+  '/contact': siegeSeul(),
+};
+
+export const coordonneesPour = (pathname: string): Coordonnees => COORDONNEES[pathname.replace(/\/+$/, '') || '/'] ?? siegeSeul();
+
 export type NavItem = { libelle: string; href: string; court?: string };
 
 export const NAVIGATION: NavItem[] = [

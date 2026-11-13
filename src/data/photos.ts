@@ -29,8 +29,13 @@ export const PHOTOS = {
   navireQuai: reel('reel-navire-quai', 'Navire-citerne à quai, flexible de déchargement suspendu au-dessus du quai.', '50% 45%'),
   stationSanol: visuel('station-sanol', 'Station-service SANOL au coucher du soleil, avec sa boutique et son totem de prix.', '45% 55%'),
   stationPompiste: visuel('station-pompiste', 'Pompiste SANOL souriant devant une station-service SANOL.', '72% 40%'),
-  // Carte « SANOL GAZ · Centre Emplisseur de Kpogan ». L'image générée remplacera ce fichier et servira aussi au bandeau de /sanol-gaz.
-  sanolGaz: visuel('affiche-sanol-gaz', 'Bouteilles de gaz SANOL GAZ de plusieurs formats.', '88% 62%'),
+  // Une seule image pour le bandeau de /sanol-gaz et la carte « SANOL GAZ · Centre Emplisseur de Kpogan ».
+  sanolGaz: visuel('centre-emplisseur-usine', 'Opérateurs SANOL GAZ au carrousel d’emplissage des bouteilles, au Centre Emplisseur.', '62% 50%'),
+  tradingPoste: visuel('trading-poste', 'Écrans d’un poste de trading affichant des cours en chandeliers.', '62% 50%'),
+  tradingGraphique: visuel('trading-graphique', 'Graphique de cours en chandeliers, en hausse.', '50% 50%'),
+  bouteille6: visuel('bouteille-6kg', 'Bouteille de gaz SANOL de 6 kg.'),
+  bouteille125: visuel('bouteille-12-5kg', 'Bouteille de gaz SANOL de 12,5 kg.'),
+  bouteille50: visuel('bouteille-50kg', 'Bouteille de gaz SANOL de 50 kg.'),
   flexibles: reel('reel-flexibles', 'Flexibles raccordés entre le navire-citerne et les installations à terre.', '50% 45%'),
   // Image provisoire : gardée tant que SANOU SA n'a pas fourni ses photos de navires.
   navire: {

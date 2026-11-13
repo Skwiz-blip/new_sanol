@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router';
 import { ENTITES } from '../data/contenu';
-import { SITE, contact } from '../data/site';
+import { SITE, contact, coordonneesPour } from '../data/site';
 import { Phone } from '../design/Icons';
 import { Arcs, Bouton, Oeil } from '../design/ui';
 import { TransitionLink } from './TransitionLink';
@@ -9,6 +9,7 @@ import { TransitionLink } from './TransitionLink';
 export function Footer() {
   const { pathname } = useLocation();
   const tel = SITE.telephones[0];
+  const coord = coordonneesPour(pathname);
   return (
     <>
       {pathname !== '/contact' && (
@@ -72,18 +73,19 @@ export function Footer() {
             <div>
               <h2>Coordonnées</h2>
               <address>
-                Siège social : {SITE.siege}
-                <br />
-                Dépôt GPL : {SITE.depot}
+                {coord.adresses.map((a, k) => (
+                  <span key={a}>
+                    {k > 0 ? <br /> : null}
+                    {a}
+                  </span>
+                ))}
               </address>
               <ul role="list">
                 <li>
                   <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
                 </li>
-                {SITE.telephones.map((t) => (
-                  <li key={t.lien}>
-                    <a href={t.lien}>{t.affiche}</a>
-                  </li>
+                {coord.telephones.map((t, k) => (
+                  <li key={t?.lien ?? `tel-${k}`}>{t ? <a href={t.lien}>{t.affiche}</a> : <span>+228 XX XX XX XX</span>}</li>
                 ))}
                 <li>
                   <a href={SITE.facebook} target="_blank" rel="noopener noreferrer">

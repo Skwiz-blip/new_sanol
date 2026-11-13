@@ -16,7 +16,7 @@ export default function TradingPage() {
   return (
     <div ref={ref}>
       <PageHero
-        photo="spheresCiel"
+        photo="tradingPoste"
         fil="Trading & Supply Chain"
         oeil="Trading & Supply Chain."
         lignes={['Coordonner la chaîne,', 'de l’achat à la distribution.']}

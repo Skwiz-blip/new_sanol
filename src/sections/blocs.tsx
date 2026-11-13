@@ -127,6 +127,9 @@ export function Trading({ complet }: { complet?: boolean }) {
                 Notre stratégie
               </Bouton>
             )}
+            <div className="trading__visuel">
+              <Photo id="tradingGraphique" reveal />
+            </div>
           </div>
           <ol className="expertises" role="list" data-reveal="stagger">
             {EXPERTISES.map((x, k) => (

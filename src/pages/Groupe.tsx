@@ -20,7 +20,7 @@ export default function Groupe() {
   return (
     <div ref={ref}>
       <PageHero
-        photo="siegeDrone"
+        photo="sphere"
         fil="Le Groupe"
         oeil="Le Groupe."
         lignes={['Une vision,', 'une ambition,', 'plusieurs horizons.']}
