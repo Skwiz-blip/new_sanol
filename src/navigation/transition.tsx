@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useRef, type ReactNo
 import { useLocation, useNavigate } from 'react-router';
 import { useQuality } from '../motion/quality';
 import { useSmoothScroll } from '../motion/SmoothScroll';
-import { PHOTOS, type PhotoId } from '../data/photos';
+import { PHOTOS, type Photo, type PhotoId } from '../data/photos';
 import { NAVIGATION, SITE } from '../data/site';
 
 /**
@@ -22,9 +22,17 @@ import { NAVIGATION, SITE } from '../data/site';
 type Ctx = { go: (to: string, label?: string) => void; busy: () => boolean };
 const TransitionContext = createContext<Ctx>({ go: () => {}, busy: () => false });
 
-/** Photographie de l'écran de transition, par destination. Par défaut : l'agent devant les baies. */
-const PHOTO_TRANSITION: Partial<Record<string, PhotoId>> = { '/stations': 'stationSanol' };
-const photoPour = (to: string) => PHOTOS[PHOTO_TRANSITION[to.split(/[?#]/)[0]] ?? 'agent'].src;
+/** Photographie de l'écran de transition : une différente pour chaque destination. */
+const PHOTO_TRANSITION: Record<string, PhotoId> = {
+  '/': 'agent',
+  '/groupe': 'siege',
+  '/depot-gpl': 'baiesDrone',
+  '/sanol-gaz': 'centreEmplisseur',
+  '/stations': 'stationSanol',
+  '/trading-supply-chain': 'navireQuai',
+  '/contact': 'equipeBaies',
+};
+const photoPour = (to: string): Photo => PHOTOS[PHOTO_TRANSITION[to.split(/[?#]/)[0]] ?? 'spheresCiel'];
 const attendre = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
 function labelFor(to: string): string {
@@ -64,9 +72,10 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
       title.textContent = label ?? labelFor(to);
       stop();
       const image = el.querySelector<HTMLImageElement>('.pt__panel--photo img');
-      const src = photoPour(to);
+      const { src, focus } = photoPour(to);
       if (image && image.getAttribute('src') !== src) {
         image.src = src;
+        image.style.objectPosition = focus ?? '50% 50%';
         await Promise.race([image.decode().catch(() => {}), attendre(300)]);
       }
       gsap.set(el, { visibility: 'visible' });
@@ -108,12 +117,24 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
     [location.pathname, navigate, scrollTo, start, stop, tier],
   );
 
-  // Au repos, on précharge les photos des écrans de transition.
+  // On précharge la photo d'une destination dès que le pointeur (ou le clavier) arrive sur son lien.
   useEffect(() => {
-    const id = window.setTimeout(() => {
-      for (const k of Object.values(PHOTO_TRANSITION)) if (k) new Image().src = PHOTOS[k].src;
-    }, 2500);
-    return () => window.clearTimeout(id);
+    const deja = new Set<string>();
+    const intention = (e: Event) => {
+      const lien = (e.target as Element | null)?.closest?.('a[href^="/"]');
+      const href = lien?.getAttribute('href');
+      if (!href) return;
+      const { src } = photoPour(href);
+      if (deja.has(src)) return;
+      deja.add(src);
+      new Image().src = src;
+    };
+    document.addEventListener('pointerover', intention, { passive: true });
+    document.addEventListener('focusin', intention);
+    return () => {
+      document.removeEventListener('pointerover', intention);
+      document.removeEventListener('focusin', intention);
+    };
   }, []);
 
   // La nouvelle route est rendue : on libère la transition.

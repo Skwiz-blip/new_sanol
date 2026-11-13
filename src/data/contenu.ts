@@ -45,13 +45,14 @@ export const ENTITES: Entite[] = [
     points: ['Réseau de stations-service', 'Distribution de produits pétroliers', 'Espaces commerciaux (shops)'],
     photo: 'stationSanol',
   },
+  
 ];
 
 /** La chaîne d'approvisionnement du GPL, de la mer aux camions-citernes. */
 export const CHAINE: { rang: string; titre: string; texte: string; photo: PhotoId }[] = [
-  { rang: '01', titre: 'Approvisionnement maritime', texte: 'Arrivée du tanker transportant le GPL.', photo: 'navireQuai' },
-  { rang: '02', titre: 'Accostage', texte: 'Arrivée et accostage du navire au quai.', photo: 'accostage' },
-  { rang: '03', titre: 'Opérations de réception', texte: 'Raccordement des flexibles entre le navire et les installations terrestres.', photo: 'flexibles' },
+  { rang: '01', titre: 'Approvisionnement maritime', texte: 'Arrivée du tanker transportant le GPL.', photo: 'navireApproche' },
+  { rang: '02', titre: 'Accostage', texte: 'Arrivée et accostage du navire au quai.', photo: 'flexibles' },
+  { rang: '03', titre: 'Opérations de réception', texte: 'Raccordement des flexibles entre le navire et les installations terrestres.', photo: 'accostage' },
   { rang: '04', titre: 'Stockage', texte: 'Acheminement du GPL vers les installations de stockage, notamment la sphère.', photo: 'sphereSol' },
   { rang: '05', titre: 'Transfert du produit', texte: 'Circulation du GPL à travers les pipelines, de la sphère jusqu’aux baies de chargement.', photo: 'raccordement' },
   { rang: '06', titre: 'Distribution', texte: 'Chargement du GPL dans les camions-citernes, vers les clients et les points de distribution.', photo: 'stationSanol' },

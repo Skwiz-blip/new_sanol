@@ -31,6 +31,7 @@ export const PHOTOS = {
   stationPompiste: visuel('station-pompiste', 'Pompiste SANOL souriant devant une station-service SANOL.', '72% 40%'),
   // Une seule image pour le bandeau de /sanol-gaz et la carte « SANOL GAZ · Centre Emplisseur de Kpogan ».
   sanolGaz: visuel('centre-emplisseur-usine', 'Opérateurs SANOL GAZ au carrousel d’emplissage des bouteilles, au Centre Emplisseur.', '62% 50%'),
+  navireApproche: visuel('navire-gpl-approche', 'Navire transporteur de GPL approchant des installations portuaires.', '58% 68%'),
   tradingPoste: visuel('trading-poste', 'Écrans d’un poste de trading affichant des cours en chandeliers.', '62% 50%'),
   tradingGraphique: visuel('trading-graphique', 'Graphique de cours en chandeliers, en hausse.', '50% 50%'),
   bouteille6: visuel('bouteille-6kg', 'Bouteille de gaz SANOL de 6 kg.'),
