@@ -34,9 +34,6 @@ export const PHOTOS = {
   navireApproche: visuel('navire-gpl-approche', 'Navire transporteur de GPL approchant des installations portuaires.', '58% 68%'),
   tradingPoste: visuel('trading-poste', 'Écrans d’un poste de trading affichant des cours en chandeliers.', '62% 50%'),
   tradingGraphique: visuel('trading-graphique', 'Graphique de cours en chandeliers, en hausse.', '50% 50%'),
-  bouteille6: visuel('bouteille-6kg', 'Bouteille de gaz SANOL de 6 kg.'),
-  bouteille125: visuel('bouteille-12-5kg', 'Bouteille de gaz SANOL de 12,5 kg.'),
-  bouteille50: visuel('bouteille-50kg', 'Bouteille de gaz SANOL de 50 kg.'),
   accostage: reel('reel-accostage', 'Opérateurs SANOU SA en tenue rouge assemblant une conduite sur le quai.', '45% 62%'),
   flexibles: reel('reel-flexibles', 'Flexibles raccordés entre le navire-citerne et les installations à terre.', '50% 45%'),
   // Image provisoire : gardée tant que SANOU SA n'a pas fourni ses photos de navires.

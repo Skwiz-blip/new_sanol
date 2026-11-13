@@ -117,8 +117,4 @@ export const VALEURS: { titre: string; texte: string }[] = [
 ];
 
 /** Les formats de bouteilles SANOL. */
-export const FORMATS: { valeur: string; photo?: PhotoId }[] = [
-  { valeur: '6 kg', photo: 'bouteille6' },
-  { valeur: '12,5 kg', photo: 'bouteille125' },
-  { valeur: '50 kg', photo: 'bouteille50' },
-];
+export const FORMATS = ['6 kg', '12,5 kg', '50 kg'];

@@ -78,10 +78,9 @@ export default function SanolGaz() {
           </div>
           <ul className="formats" role="list" data-reveal="stagger">
             {FORMATS.map((f) => {
-              const [nombre, unite] = f.valeur.split(' ');
+              const [nombre, unite] = f.split(' ');
               return (
-                <li key={f.valeur} className={f.photo ? 'formats__avec-photo' : undefined}>
-                  {f.photo ? <Photo id={f.photo} className="formats__photo" /> : null}
+                <li key={f}>
                   <span className="formats__valeur">
                     {nombre}
                     <small>{unite}</small>
