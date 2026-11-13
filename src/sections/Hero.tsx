@@ -7,7 +7,7 @@ import { useQuality } from '../motion/quality';
 /** Les vues de l'ouverture : une par entité. La première est la sphère portant l'inscription Sanol Gaz. */
 const VUES: { photo: PhotoId; legende: string }[] = [
   { photo: 'sphere', legende: 'Dépôt GPL · Katanga' },
-  { photo: 'centreEmplisseur', legende: 'Centre Emplisseur · Kpogan' },
+  { photo: 'sanolGaz', legende: 'Centre Emplisseur · Kpogan' },
   { photo: 'camionDepot', legende: 'Stations-service et shops' },
 ];
 const DUREE = 6500;
