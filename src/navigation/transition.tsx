@@ -63,7 +63,6 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
       const title = el.querySelector('.pt__title span') as HTMLElement;
       title.textContent = label ?? labelFor(to);
       stop();
-      // La photo propre à la destination ; préchargée au repos, sinon on lui laisse 300 ms au plus.
       const image = el.querySelector<HTMLImageElement>('.pt__panel--photo img');
       const src = photoPour(to);
       if (image && image.getAttribute('src') !== src) {
