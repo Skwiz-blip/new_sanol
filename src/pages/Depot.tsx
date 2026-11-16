@@ -11,9 +11,9 @@ import { Chiffres, Mosaique } from '../sections/blocs';
 import { useSeo } from '../seo';
 
 const ACTIVITES: { titre: string; texte: string; photo: PhotoId }[] = [
-  { titre: 'La réception', texte: 'Le GPL arrive par voie maritime, à bord d’un tanker.', photo: 'controle' },
+  { titre: 'La réception', texte: 'Le GPL arrive par voie maritime, à bord d’un tanker.', photo: 'navireTerminal' },
   { titre: 'Le stockage', texte: 'Le produit est stocké dans une sphère construite sous talus.', photo: 'sphereSol' },
-  { titre: 'La distribution', texte: 'Les camions-citernes sont chargés depuis trois baies de chargement.', photo: 'stationSanol' },
+  { titre: 'La distribution', texte: 'Les camions-citernes sont chargés depuis trois baies de chargement.', photo: 'camion' },
 ];
 
 export default function Depot() {
@@ -90,7 +90,7 @@ export default function Depot() {
             </div>
             <div>
               <dt>Parking</dt>
-              <dd>Une flotte de 100 camions-citernes et plus</dd>
+              <dd>Place pour 100 camions-citernes et plus</dd>
             </div>
           </dl>
         </div>

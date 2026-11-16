@@ -25,7 +25,7 @@ const TransitionContext = createContext<Ctx>({ go: () => {}, busy: () => false }
 /** Photographie de l'écran de transition : une différente pour chaque destination. */
 const PHOTO_TRANSITION: Record<string, PhotoId> = {
   '/': 'agent',
-  '/groupe': 'siege',
+  '/groupe': 'siegeHaut',
   '/depot-gpl': 'baiesDrone',
   '/sanol-gaz': 'centreEmplisseur',
   '/stations': 'stationSanol',

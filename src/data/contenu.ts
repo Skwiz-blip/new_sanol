@@ -39,7 +39,7 @@ export const ENTITES: Entite[] = [
     rang: '03',
     marque: 'SANOL',
     lieu: 'Stations-service et shops',
-    titre: 'Les produits pétroliers, au plus près des clients.',
+    titre: 'Les produits pétroliers, plus près de vous.',
     resume:
       'Depuis 2007, SANOL distribue les produits pétroliers à travers son réseau de stations-service, avec des espaces commerciaux (shops) qui offrent des produits et services de proximité.',
     points: ['Réseau de stations-service', 'Distribution de produits pétroliers', 'Espaces commerciaux (shops)'],
@@ -53,9 +53,9 @@ export const CHAINE: { rang: string; titre: string; texte: string; photo: PhotoI
   { rang: '01', titre: 'Approvisionnement maritime', texte: 'Arrivée du tanker transportant le GPL.', photo: 'navireApproche' },
   { rang: '02', titre: 'Accostage', texte: 'Arrivée et accostage du navire au quai.', photo: 'flexibles' },
   { rang: '03', titre: 'Opérations de réception', texte: 'Raccordement des flexibles entre le navire et les installations terrestres.', photo: 'accostage' },
-  { rang: '04', titre: 'Stockage', texte: 'Acheminement du GPL vers les installations de stockage, notamment la sphère.', photo: 'sphereSol' },
-  { rang: '05', titre: 'Transfert du produit', texte: 'Circulation du GPL à travers les pipelines, de la sphère jusqu’aux baies de chargement.', photo: 'raccordement' },
-  { rang: '06', titre: 'Distribution', texte: 'Chargement du GPL dans les camions-citernes, vers les clients et les points de distribution.', photo: 'stationSanol' },
+  { rang: '04', titre: 'Transfert du produit', texte: 'Circulation du GPL à travers les pipelines, du quai pétrolier à la sphère, jusqu’aux baies de chargement.', photo: 'pipelines' },
+  { rang: '05', titre: 'Stockage', texte: 'Acheminement du GPL vers les installations de stockage, notamment la sphère.', photo: 'sphereSol' },
+  { rang: '06', titre: 'Distribution', texte: 'Chargement du GPL dans les camions-citernes, vers les clients et les points de distribution.', photo: 'camion' },
 ];
 
 /** Le dépôt en chiffres : uniquement ce que le Groupe a communiqué. */
@@ -69,7 +69,7 @@ export const CHIFFRES: { valeur: string; suite?: string; libelle: string; ton: '
 export const GARANTIES: { titre: string; texte: string }[] = [
   { titre: 'Sphère sous talus certifiée', texte: 'Sphère construite sous talus, certifiée CODAP 2015, Division 2, Catégorie A, par PARESA.' },
   { titre: 'Contrôle avant chargement', texte: 'Contrôle sécuritaire des camions-citernes avant chaque chargement.' },
-  { titre: 'Une flotte accueillie', texte: 'Un parking disponible pour accueillir une flotte de 100 camions-citernes et plus.' },
+  { titre: 'Un grand parking', texte: 'Un parking qui peut recevoir 100 camions-citernes et plus.' },
 ];
 
 export const EXPERTISES: { titre: string; texte: string }[] = [

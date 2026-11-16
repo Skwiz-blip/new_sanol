@@ -33,17 +33,18 @@ export type Telephone = { affiche: string; lien: string };
 export type Coordonnees = { adresses: string[]; telephones: (Telephone | null)[] };
 
 const siegeSeul = (): Coordonnees => ({ adresses: [`Siège social : ${SITE.siege}`], telephones: [null] });
+const avecDepot = (): Coordonnees => ({
+  adresses: [`Siège social : ${SITE.siege}`, `Dépôt GPL : ${SITE.depot}`],
+  telephones: [...SITE.telephones],
+});
 
 export const COORDONNEES: Record<string, Coordonnees> = {
   '/': siegeSeul(),
   '/groupe': siegeSeul(),
-  '/depot-gpl': {
-    adresses: [`Siège social : ${SITE.siege}`, `Dépôt GPL : ${SITE.depot}`],
-    telephones: [...SITE.telephones],
-  },
+  '/depot-gpl': avecDepot(),
   '/sanol-gaz': siegeSeul(),
   '/stations': siegeSeul(),
-  '/trading-supply-chain': siegeSeul(),
+  '/trading-supply-chain': avecDepot(),
   '/contact': siegeSeul(),
 };
 
