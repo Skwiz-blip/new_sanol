@@ -55,7 +55,7 @@ export const CHAINE: { rang: string; titre: string; texte: string; photo: PhotoI
   { rang: '03', titre: 'Opérations de réception', texte: 'Raccordement des flexibles entre le navire et les installations terrestres.', photo: 'accostage' },
   { rang: '04', titre: 'Transfert du produit', texte: 'Circulation du GPL à travers les pipelines, du quai pétrolier à la sphère, jusqu’aux baies de chargement.', photo: 'pipelines' },
   { rang: '05', titre: 'Stockage', texte: 'Acheminement du GPL vers les installations de stockage, notamment la sphère.', photo: 'sphereSol' },
-  { rang: '06', titre: 'Distribution', texte: 'Chargement du GPL dans les camions-citernes, vers les clients et les points de distribution.', photo: 'camion' },
+  { rang: '06', titre: 'Distribution', texte: 'Chargement du GPL dans les camions-citernes, vers les clients et les points de distribution.', photo: 'operateurs' },
 ];
 
 /** Le dépôt en chiffres : uniquement ce que le Groupe a communiqué. */
@@ -117,4 +117,8 @@ export const VALEURS: { titre: string; texte: string }[] = [
 ];
 
 /** Les formats de bouteilles SANOL. */
-export const FORMATS = ['6 kg', '12,5 kg', '50 kg'];
+export const FORMATS: { valeur: string; photo: PhotoId }[] = [
+  { valeur: '6 kg', photo: 'bouteille6' },
+  { valeur: '12,5 kg', photo: 'bouteille125' },
+  { valeur: '50 kg', photo: 'bouteille50' },
+];

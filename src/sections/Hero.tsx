@@ -8,7 +8,7 @@ import { useQuality } from '../motion/quality';
 const VUES: { photo: PhotoId; legende: string }[] = [
   { photo: 'sphere', legende: 'Dépôt GPL · Katanga' },
   { photo: 'sanolGaz', legende: 'Centre Emplisseur · Kpogan' },
-  { photo: 'camionDepot', legende: 'Stations-service et shops' },
+  { photo: 'stationSanol', legende: 'Stations-service et shops' },
 ];
 const DUREE = 6500;
 

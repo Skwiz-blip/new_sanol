@@ -28,7 +28,7 @@ export function Intro() {
       </div>
       <div className="cadre">
         <div className="intro__visuel">
-          <Photo id="spheres" reveal parallax={0.1} />
+          <Photo id="superette" reveal parallax={0.1} />
         </div>
         <dl className="reperes" data-reveal="stagger">
           <div>

@@ -28,7 +28,11 @@ export const PHOTOS = {
   siegeDrone: reel('reel-siege-drone', 'Le bâtiment administratif et l’entrée du dépôt, vus du ciel.', '50% 55%'),
   centreEmplisseur: reel('reel-centre-remplisseur', 'La chaîne d’emplissage des bouteilles de gaz du Centre Emplisseur.', '45% 55%'),
   navireQuai: reel('reel-navire-quai', 'Navire-citerne à quai, flexible de déchargement suspendu au-dessus du quai.', '50% 45%'),
+  superette: visuel('superette', 'Intérieur d’un shop de station-service : rayons de boissons, réfrigérateurs et caisse.', '50% 55%'),
   stationSanol: visuel('station-sanol', 'Station-service SANOL au coucher du soleil, avec sa boutique et son totem de prix.', '45% 55%'),
+  bouteille6: visuel('bouteille-6kg', 'Bouteille de gaz SANOL de 6 kg.'),
+  bouteille125: visuel('bouteille-12-5kg', 'Bouteille de gaz SANOL de 12,5 kg.'),
+  bouteille50: visuel('bouteille-50kg', 'Bouteille de gaz SANOL de 50 kg.'),
   stationPompiste: visuel('station-pompiste', 'Pompiste SANOL souriant devant une station-service SANOL.', '72% 40%'),
   // Une seule image pour le bandeau de /sanol-gaz et la carte « SANOL GAZ · Centre Emplisseur de Kpogan ».
   sanolGaz: visuel('centre-emplisseur-usine', 'Opérateurs SANOL GAZ au carrousel d’emplissage des bouteilles, au Centre Emplisseur.', '62% 50%'),
